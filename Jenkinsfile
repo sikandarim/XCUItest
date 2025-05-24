@@ -22,13 +22,17 @@ pipeline {
 
     stage('Install Pods') {
       steps {
-        sh 'pod install'
+        sh '''
+          export PATH="$HOME/.rbenv/shims:$PATH"
+          pod install
+        '''
       }
     }
 
     stage('Build & Test (Simulator)') {
       steps {
         sh '''
+          export PATH="$HOME/.rbenv/shims:$PATH"
           mkdir -p build
           xcodebuild \
             -workspace "$WORKSPACE" \
