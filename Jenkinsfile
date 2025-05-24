@@ -4,7 +4,7 @@ pipeline {
   environment {
     SCHEME = "SampleXCUITests"
     DESTINATION = "platform=iOS Simulator,name=iPhone 16 Plus,OS=18.4"
-    WORKSPACE = "Sample iOS.xcworkspace"
+    WORKSPACE = "Sample iOS.xcodeproj" // or .xcworkspace if you're using it
   }
 
   stages {
@@ -20,17 +20,6 @@ pipeline {
       }
     }
 
-    stage('Install Pods') {
-      steps {
-        sh '''
-          export LANG=en_US.UTF-8
-          export LC_ALL=en_US.UTF-8
-          export PATH="$HOME/.rbenv/shims:$PATH"
-          pod install
-        '''
-      }
-    }
-
     stage('Build & Test (Simulator)') {
       steps {
         sh '''
@@ -39,7 +28,7 @@ pipeline {
           export PATH="$HOME/.rbenv/shims:$PATH"
           mkdir -p build
           xcodebuild \
-            -workspace "$WORKSPACE" \
+            -project "$WORKSPACE" \
             -scheme "$SCHEME" \
             -destination "$DESTINATION" \
             clean test \
