@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     SCHEME = "SampleXCUITests"
-    DESTINATION = "platform=iOS Simulator,name=iPhone 16 Plus,OS=18.4"
+    DESTINATION = "id=32F9086D-FE05-4B09-A168-34F7AEBFD67D"
     WORKSPACE = "Sample iOS.xcodeproj"
   }
 
