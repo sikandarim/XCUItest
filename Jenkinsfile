@@ -4,7 +4,7 @@ pipeline {
   environment {
     SCHEME = "SampleXCUITests"
     DESTINATION = "platform=iOS Simulator,name=iPhone 16 Plus,OS=18.4"
-    WORKSPACE = "Sample iOS.xcworkspace" // or use .xcodeproj if no workspace
+    WORKSPACE = "Sample iOS.xcworkspace"
   }
 
   stages {
@@ -12,19 +12,15 @@ pipeline {
       steps {
         checkout([
           $class: 'GitSCM',
-          branches: [[name: '*/main']], // Change to your branch if different
+          branches: [[name: '*/main']],
           userRemoteConfigs: [[
-            url: 'https://github.com/sikandarim/XCUItest.git',
-            credentialsId: 'github-creds' // The ID you set in Jenkins credentials
+            url: 'https://github.com/sikandarim/XCUItest.git'
           ]]
         ])
       }
     }
 
     stage('Install Pods') {
-      when {
-        expression { fileExists('Podfile') }
-      }
       steps {
         sh 'pod install'
       }
@@ -33,6 +29,7 @@ pipeline {
     stage('Build & Test (Simulator)') {
       steps {
         sh '''
+          mkdir -p build
           xcodebuild \
             -workspace "$WORKSPACE" \
             -scheme "$SCHEME" \
