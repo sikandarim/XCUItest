@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FACFD092DE258700008196A /* Jenkinsfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
 		120BE9D720145CEF00F85F1E /* Sample iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		120BE9DA20145CEF00F85F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		120BE9DC20145CEF00F85F1E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		120BE9CE20145CEE00F85F1E = {
 			isa = PBXGroup;
 			children = (
+				0FACFD092DE258700008196A /* Jenkinsfile */,
 				120BE9D920145CEF00F85F1E /* Sample iOS */,
 				E6A69A582032F58A0047EEBF /* SampleXCUITests */,
 				120BE9D820145CEF00F85F1E /* Products */,
@@ -369,13 +371,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8XPT93F9Q7;
+				DEVELOPMENT_TEAM = CZB6KCVD66;
 				INFOPLIST_FILE = "Sample iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.browserstack.Sample-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariamsikandari.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,13 +389,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8XPT93F9Q7;
+				DEVELOPMENT_TEAM = CZB6KCVD66;
 				INFOPLIST_FILE = "Sample iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.browserstack.Sample-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariamsikandari.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
