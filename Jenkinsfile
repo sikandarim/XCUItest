@@ -4,7 +4,7 @@ pipeline {
   environment {
     SCHEME = "SampleXCUITests"
     DESTINATION = "platform=iOS Simulator,name=iPhone 16 Plus,OS=18.4"
-    WORKSPACE = "SampleApp.xcworkspace" // or use .xcodeproj if no workspace
+    WORKSPACE = "Sample iOS.xcworkspace" // or use .xcodeproj if no workspace
   }
 
   stages {
