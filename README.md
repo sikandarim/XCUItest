@@ -21,3 +21,4 @@ A sample iOS app supporting [XCUI Tests](https://developer.apple.com/library/con
 	5. zip -r SampleUITests.zip SampleXCUITests-Runner.app/
 5. Use the ipa, and zip file to run on Browserstack
 
+# XCUItest
