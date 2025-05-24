@@ -3,6 +3,7 @@ pipeline {
 
   environment {
     SCHEME = "SampleXCUITests"
+    DESTINATION = "platform=iOS Simulator,name=iPhone 16 Plus,OS=18.4"
     WORKSPACE = "Sample iOS.xcodeproj"
   }
 
@@ -29,7 +30,7 @@ pipeline {
           xcodebuild \
             -project "$WORKSPACE" \
             -scheme "$SCHEME" \
-            -destination id=32F9086D-FE05-4B09-A168-34F7AEBFD67D \
+            -destination "$DESTINATION" \
             clean test \
             -derivedDataPath build/DerivedData \
             | tee build/xcuitest.log | xcpretty --report junit
